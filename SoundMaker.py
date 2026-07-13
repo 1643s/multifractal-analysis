@@ -27,7 +27,7 @@ def soundmake (series, csvfolder, filename2, type, i):
         df_series = series
 
     # --- Configuration --- #
-    enable_frequency_scaling = True  # Set to True to enable frequency scaling, or False to disable it
+    enable_frequency_scaling = False  # Set to True to enable frequency scaling, or False to disable it
     snap_to_piano_keys = False      # Set to True to snap frequencies to the nearest piano key frequency
     tempo_factor = 2          # Increase this value to make the audio play faster
 
@@ -44,7 +44,7 @@ def soundmake (series, csvfolder, filename2, type, i):
     max_freq_orig = df_series['freq'].max()
 
     # 目標の周波数範囲
-    min_freq_target = 369.0
+    min_freq_target = 200.0
     max_freq_target = 880.0
 
     # Iterate through the rows to create audio segments

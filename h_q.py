@@ -149,5 +149,5 @@ def h_q (series, filename2, csvfolder, type, i, log) :
   plt.title(f'q - h(q) with Fitted Curve  R²={r2_hq:.4f}')
   plt.legend() # Display the legend with the labels
   plt.grid(True)
-  fig.savefig(csvfolder + "/" + filename2 + "-" + str(i)+ "-" + type +".png", dpi=150, bbox_inches='tight')  # ← 先に保存
+  fig.savefig(csvfolder + "/" + "h(q) - " + filename2 + "-" + str(i)+ "-" + type +".png", dpi=150, bbox_inches='tight')  # ← 先に保存
   plt.show()
