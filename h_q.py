@@ -145,7 +145,7 @@ def h_q (series, filename2, csvfolder, type, i, log) :
   plt.ylabel('h(q)')
   plt.text(0.05, 0.95, f"h(q) = {c:.2f} - {A:.2f}/2 · tanh({k:.2f}(q-{q_0:.2f}))",
           transform=plt.gca().transAxes, fontsize=8, va='top')
-  plt.gca().set_ylim(0, 3.5)
+  plt.gca().set_ylim(-1.0, 3.5)
   plt.title(f'q - h(q) with Fitted Curve  R²={r2_hq:.4f}')
   plt.legend() # Display the legend with the labels
   plt.grid(True)
