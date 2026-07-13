@@ -37,6 +37,7 @@ def soundmake (series, csvfolder, filename2, type, i):
 
     fs = 22050  # Sample rate
     audio_segments = []
+    phase = 0.0
 
     # 現在の周波数範囲を取得
     min_freq_orig = df_series['freq'].min()
@@ -76,7 +77,14 @@ def soundmake (series, csvfolder, filename2, type, i):
         # Ensure duration is positive to avoid issues with linspace
         if duration > 0:
             t = np.linspace(0, duration, int(fs * duration), endpoint=False)
-            tone = np.sin(2 * np.pi * freq * t)
+
+            # 前の音の続きの位相から開始
+            tone = np.sin(2 * np.pi * freq * t + phase)
+
+            # 次の音のために位相を更新
+            phase += 2 * np.pi * freq * duration
+            phase = np.mod(phase, 2 * np.pi)
+
             audio_segments.append(tone)
 
     # Concatenate all generated audio segments
