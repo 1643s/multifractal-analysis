@@ -141,3 +141,14 @@ for i in selected:
 
     #5MFDFA
     h_q(series = series, csvfolder = csvfolder, filename2 = filename2, i = i,type = "fourier", log = all_params_log)
+   
+    #保存
+    pd.DataFrame(all_params_log).to_csv(
+
+        logpath,
+
+        index=False,
+
+        header=False
+
+    )
