@@ -12,7 +12,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-midipath =  "/Users/shumiyajima/EEPYTHON/MIDI/midi/BACH_SINFONIEN/1 完遂/1-2.mid"
+midipath =  "/Users/shumiyajima/EEPYTHON/MIDI/midi/BACH_SINFONIEN/1 完遂/1-1.mid"
 csvfolder =  "/Users/shumiyajima/EEPYTHON/MIDI/midi/BACH_SINFONIEN/1 完遂/"
 filename = "Bach_Sinfonien1-1"
 filename2 = "Bach-Sinfonien1-1"
