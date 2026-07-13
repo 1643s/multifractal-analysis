@@ -12,9 +12,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-
-
-midipath =  "/Users/shumiyajima/EEPYTHON/MIDI/midi/BACH_SINFONIEN/1 完遂/1-1.mid"
+midipath =  "/Users/shumiyajima/EEPYTHON/MIDI/midi/BACH_SINFONIEN/1 完遂/1-2.mid"
 csvfolder =  "/Users/shumiyajima/EEPYTHON/MIDI/midi/BACH_SINFONIEN/1 完遂/"
 filename = "Bach_Sinfonien1-1"
 filename2 = "Bach-Sinfonien1-1"
@@ -59,7 +57,7 @@ e = {}
 for i in selected:
     #順番のみ 作成
     series = d[i]
-    freq = Event(series[:, 0])
+    freq = Event(series[:, 1])
     x = np.linspace(1, len(freq), len(freq))
     c = np.column_stack((x, freq))  
     e[i] = c
