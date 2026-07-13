@@ -20,11 +20,12 @@ logpath = "/Users/shumiyajima/EEPYTHON/MIDI/midi/log.csv"
 
 #記録リストチェック
 if os.path.exists(logpath):
-    all_params_log = np.loadtxt(logpath, delimiter=",").tolist()
-    if not isinstance(all_params_log, list):
-        all_params_log = [all_params_log]
+    all_params_log = pd.read_csv(
+        logpath,
+        header=None
+    ).values.tolist()
 else:
-    all_params_log = [] 
+    all_params_log = []
 
 #時系列作成
 d = {}
