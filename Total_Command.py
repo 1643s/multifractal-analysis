@@ -12,10 +12,10 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-midipath =  "/Users/shumiyajima/EEPYTHON/MIDI/midi/BACH_SINFONIEN/15/15-3.mid"
-csvfolder =  "/Users/shumiyajima/EEPYTHON/MIDI/midi/BACH_SINFONIEN/15"
-filename = "Bach_Sinfonien15_3"
-filename2 = "Bach-Sinfonien15-3"
+midipath =  "/Users/shumiyajima/EEPYTHON/MIDI/midi/BACH DIE KUNST DER FUGE/Bach_Kunst_der_Fuge_1/bach_kunst_der_fuge_1_(c)onclassical.mid"
+csvfolder =  "/Users/shumiyajima/EEPYTHON/MIDI/midi/BACH DIE KUNST DER FUGE/Bach_Kunst_der_Fuge_1"
+filename = "Bach_Die_Kunst_Der_Fuge_1"
+filename2 = "Bach-Die-Kunst-Der-Fuge-1"
 logpath = "/Users/shumiyajima/EEPYTHON/MIDI/midi/log.csv"
 
 #記録リストチェック
