@@ -20,7 +20,7 @@ def h_q (series, filename2, csvfolder, type, i, log) :
     local_max_time_val = int(series["time"].max()) + 1
     F_s_list = []
 
-    scales = np.unique(np.logspace(np.log10(70), np.log10(200), 40).astype(int))
+    scales = np.unique(np.logspace(np.log10(60), np.log10(180), 40).astype(int))
 
     for s in scales:
         current_scale_fluctuations = []
